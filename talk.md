@@ -28,6 +28,17 @@ This process significantly lowers technical barriers across tool development by 
    - 3 questions
 
 ---
+# Due for a packaging update talk
+
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/773049/contributions/3473243/">
+      <img src="figures/chep-2019-title-slide.png"; width=80%>
+   </a>
+</p>
+
+.center.large[[Chris Burr, CHEP 2019](https://indico.cern.ch/event/773049/contributions/3473243/)]
+
+---
 # Overview
 
 .huge[
