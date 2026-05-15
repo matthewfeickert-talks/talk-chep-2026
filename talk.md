@@ -39,6 +39,56 @@ This process significantly lowers technical barriers across tool development by 
 .center.large[[Chris Burr, CHEP 2019](https://indico.cern.ch/event/773049/contributions/3473243/)]
 
 ---
+# Software distributions
+
+.kol-1-2[
+.large[
+In HEP we already have multiple forms of software distribution (different solutions for different kinds of software)
+
+* [CernVM-FS](https://cernvm.cern.ch/fs/)
+* Source distribution ([Spack](https://spack.io/))
+* Operating system specific distributions (`.rpm`, `.deb`)
+* Linux container images (Docker, Apptainer)
+* Python packages (PyPI, private indexes, sdist)
+* Conda packages
+]
+]
+.kol-1-2[
+.large[
+Focus on .bold[end-users]
+
+* One package format across all computing systems
+   - cluster and local machine are the same
+* One package format across all software types
+   - arbitrary software packaging
+* Multi-platform
+   - Target for Linux (x86_64, aarch64), macOS (x86_64, arm64), Windows
+* Give declarative specification
+* Scientific software environment reproducibility
+]
+]
+
+---
+# What is a [conda package](https://prefix.dev/blog/what-is-a-conda-package)?
+
+.kol-2-3[
+.large[
+* Fundamentally, a compressed archive containing:
+   - metadata
+   - files, platform-specific binaries, symlinks
+]
+]
+.kol-1-3.center[
+<p style="text-align:center;">
+   <a href="https://pixi.prefix.dev/">
+      <img src="figures/paxton-small.png"; width=80%>
+   </a>
+</p>
+
+.center["Paxton" the conda package (prefix.dev GmbH)]
+]
+
+---
 # Overview
 
 .huge[
