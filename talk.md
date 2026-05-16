@@ -71,22 +71,82 @@ Focus on .bold[end-users]
 ---
 # What is a [conda package](https://prefix.dev/blog/what-is-a-conda-package)?
 
-.kol-2-3[
+.kol-3-5[
 .large[
 * Fundamentally, a compressed archive containing:
-   - metadata
+   - metadata describing package build requirements and dependencies
    - files, platform-specific binaries, symlinks
+* Simple yet powerful
+   - .bold[Any] software can be packaged as a conda package
+   - Including things like CUDA libraries
 ]
-]
-.kol-1-3.center[
+
 <p style="text-align:center;">
    <a href="https://pixi.prefix.dev/">
-      <img src="figures/paxton-small.png"; width=80%>
+      <img src="figures/paxton-small.png"; width=30%>
    </a>
 </p>
 
 .center["Paxton" the conda package (prefix.dev GmbH)]
 ]
+.kol-2-5[
+.code-large[
+```
+.pixi/
+└── envs
+    └── default
+        ├── bin
+        ├── conda-meta
+        ├── include
+        ├── lib
+        ├── man
+        ├── share
+        ├── ssl
+        └── x86_64-conda-linux-gnu
+```
+]
+]
+
+
+---
+# What make conda packages special?
+
+* TODO: Figure out the lead with awesome part
+* Package all the way down to the `glibc` level
+* No reliance or assumption on existing operating system components
+* Multi-platform binary builds for the same release of a package
+* "build variants" that allow for further refinement or optimization
+   - Example: MPI build variants `${mpi}` for MPICH and Open MPI
+* Immutable (? should this be focus) artifact
+
+---
+# How do you create a conda package?
+
+* Create a .bold[recipe] in the form of a structured YAML file (`recipe/recipe.yaml`) with a recipe build tool (`rattler-build`)
+* Show YAML
+
+---
+# What is conda-forge?
+
+* Conda package "forge"
+* Best cyberinfrastrucutre
+
+---
+# How does conda-forge work?
+
+* Very good cyberinfrastructure
+* Global pinning
+* Community approach of building coherently together
+* Allows for much better building than by yourself on private channel
+
+---
+# HEP Packaging Coordiantion
+
+* What / who is it?
+* What does it provide?
+* What benefits are there for contributing.
+* What can it do today in terms of support.
+
 
 ---
 # Overview
